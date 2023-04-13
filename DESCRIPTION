@@ -33,7 +33,7 @@ Imports:
     lifecycle (>= 1.0.0),
     purrr,
     rappdirs,
-    rlang (>= 1.0.0),
+    rlang (>= 1.1.0),
     rprojroot (>= 1.2),
     rstudioapi,
     stats,
@@ -52,7 +52,7 @@ Suggests:
     spelling (>= 1.2),
     styler (>= 1.2.0),
     testthat (>= 3.1.5)
-Config/Needs/website:tidyverse/tidytemplate, xml2
+Config/Needs/website: tidyverse/tidytemplate, xml2
 Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US

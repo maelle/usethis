@@ -100,19 +100,9 @@ is_windows <- function() {
   .Platform$OS.type == "windows"
 }
 
-check_string <- function(x, nm = deparse(substitute(x))) {
-  if (!is_string(x)) {
-    ui_stop("{ui_code(nm)} must be a string.")
-  }
+maybe_string <- function(x, ..., arg = caller_arg(x)) {
+  check_string(x, ..., allow_null = TRUE, arg = arg)
   x
-}
-
-maybe_string <- function(x, nm = deparse(substitute(x))) {
-  if (is.null(x)) {
-    x
-  } else {
-    check_string(x, nm = nm)
-  }
 }
 
 # For stability of `stringsAsFactors` across versions
