@@ -100,8 +100,8 @@ is_windows <- function() {
   .Platform$OS.type == "windows"
 }
 
-maybe_string <- function(x, ..., arg = caller_arg(x)) {
-  check_string(x, ..., allow_null = TRUE, arg = arg)
+maybe_string <- function(x, ..., arg = caller_arg(x), call = caller_env()) {
+  check_string(x, ..., allow_null = TRUE, arg = arg, call = call)
   x
 }
 
